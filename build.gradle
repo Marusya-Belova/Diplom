@@ -1,6 +1,6 @@
 plugins {
     id 'java'
-    id "io.freefair.lombok" version "5.3.0"
+    id "io.freefair.lombok" version "6.3.0"
     id 'io.qameta.allure' version '2.9.6'
 }
 
@@ -8,7 +8,6 @@ group 'ru.netology'
 version '1.0-SNAPSHOT'
 
 sourceCompatibility = 11
-
 compileJava.options.encoding = "UTF-8"
 compileTestJava.options.encoding = "UTF-8"
 
@@ -24,23 +23,22 @@ repositories {
 }
 
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.1'
-    testImplementation 'com.codeborne:selenide:6.3.4'
-    implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.22'
-    implementation group: 'org.postgresql', name: 'postgresql', version: '42.2.18'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.8.2'
+    testImplementation 'com.codeborne:selenide:6.4.0'
+    testImplementation 'io.qameta.allure:allure-selenide:2.17.3'
     testImplementation 'com.github.javafaker:javafaker:1.0.2'
-    testImplementation 'io.qameta.allure:allure-selenide:2.13.6'
-    testImplementation group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.30'
-    implementation 'org.projectlombok:lombok:1.18.20'
+    testImplementation 'commons-dbutils:commons-dbutils:1.7'
+    testImplementation 'mysql:mysql-connector-java:8.0.28'
+    testImplementation 'org.postgresql:postgresql:42.3.3'
+    testRuntimeOnly 'org.slf4j:slf4j-simple:1.7.36'
 }
 
 test {
     useJUnitPlatform()
     systemProperty 'selenide.headless', System.getProperty('selenide.headless')
-    systemProperty 'url', System.getProperty('url')
-    systemProperty 'user', System.getProperty('user')
-    systemProperty 'password', System.getProperty('password')
-
-
+    systemProperty 'sut.url', System.getProperty('sut.url', 'http://localhost:8080')
+    systemProperty 'db.url', System.getProperty('db.url', 'jdbc:mysql://localhost:3306/app')
+    //systemProperty 'db.url', System.getProperty('db.url', 'jdbc:postgresql://localhost:5432/app')
+    systemProperty 'db.login', System.getProperty('db.login', 'app')
+    systemProperty 'db.password', System.getProperty('db.password', 'pass')
 }
