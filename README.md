@@ -1,7 +1,7 @@
 ## Документация
 1. [План автоматизации тестирования]( https://github.com/Marusya-Belova/Diplom/blob/77a09504225e1d1ea8e3a9e47c90b65fbec9e016/documents/Plan.md)
-2. [Отчет по итогам тестирования](https://github.com//Report.md)
-3. [Отчет по итогам автоматизации тестирования](https://github.com/.md)
+2. [Отчет по итогам тестирования](https://github.com/Marusya-Belova/Diplom/blob/b6bd73a6c8623444e45522b62f6171fd2afb064f/documents/Report.md)
+3. [Отчет по итогам автоматизации тестирования](https://github.com/Marusya-Belova/Diplom/blob/b6bd73a6c8623444e45522b62f6171fd2afb064f/documents/Summary.md)
 
 ## Процедура установки, настройки и запуска ПО
 ### Перед запуском авто-тестов, необходимо:
