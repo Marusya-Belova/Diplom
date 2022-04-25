@@ -13,9 +13,10 @@
 * Количество неуспешных тест-кейсов = 22 шт
 
 **Отчет "Allure":**
-<img width="1426" alt="AllureMySQL" src="https://user-imag">
+![Screenshot_2](https://user-images.githubusercontent.com/92928675/165066874-9623cc00-92e3-491a-b78f-36e265d4c416.jpg)
 
 По дефектам заведены [Issues](https://github.com/ZabavinaL/Diploma/issues).
 
 ### 4. Общие рекомендации
 * По результатам тестирования необходимо исправить найденные дефекты.
+
